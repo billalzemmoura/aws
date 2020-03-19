@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "batnav",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billalzemmoura/batnav.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/billalzemmoura/batnav/issues"
+  },
+  "homepage": "https://github.com/billalzemmoura/batnav#readme",
+  "description": "",
+  "dependencies": {
+    "pg": "^7.18.2"
+  }
+}
