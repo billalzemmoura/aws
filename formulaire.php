@@ -1,43 +1,4 @@
-<?php
-session_start();
-include 'connect.php';
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-$nom = $_POST['nom'];
-$password=$_POST['password'];
-$hash = sha1($password);
-$prenom = $_POST['prenom'];
-$email = $_POST['email'];
 
-
-
-
-
-
-
-
-if(!empty($nom) AND !empty($prenom)AND !empty($password) AND !empty($email) ){
- $stmt=$db->prepare("INSERT INTO joueur(nom,prenom,password,email)
- 	           VALUES (:wnom,:wprenom,:wpss,:wemail);
-	                   
-	                  ");	
- $stmt->execute( array(
-
- 	'wnom' => $nom,
- 	'wprenom' =>$prenom ,
- 	'wpss' =>$password,
- 	'wemail' => $email
-
-
- 	 ));
- echo "okkk";
- header('location:login.php');
-}else {
-	echo "err user";
-}
-
-}
-
-?>
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
